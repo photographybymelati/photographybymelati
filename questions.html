@@ -93,31 +93,32 @@
             color: #666;
             margin-bottom: 1rem;
         }
-.submit-button {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
 
-.submit-button:hover {
-    background-color: var(--primary-color);
-}
+        .submit-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
 
-.submit-section {
-    margin-top: 2rem;
-}
+        .submit-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .submit-section {
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
     <h1>Website Content Questionnaire</h1>
     <p>Welcome! This questionnaire will help us create a website that perfectly represents your photography business. Please provide as much detail as possible.</p>
 
-    <form id="client-questionnaire">
+    <form id="client-questionnaire" action="https://formspree.io/f/mkgnaper" method="POST">
         <!-- PRIORITY 1 -->
         <div class="questionnaire-section">
             <span class="priority-label priority-1">Essential for Launch</span>
@@ -225,42 +226,30 @@
                 <textarea name="additional_notes" placeholder="Share any other thoughts, ideas, or questions..."></textarea>
             </div>
         </div>
-<div class="questionnaire-section submit-section">
-    <h2>Submit Your Questionnaire</h2>
-    <div class="form-group">
-        <label>Your Email Address</label>
-        <input type="email" name="client_email" required placeholder="Enter your email address">
-        <div class="help-text">We'll send a copy of your responses to this email</div>
-    </div>
-    <button type="submit" class="submit-button">Submit Questionnaire</button>
-</div>
+
+        <div class="questionnaire-section submit-section">
+            <h2>Submit Your Questionnaire</h2>
+            <div class="form-group">
+                <label>Your Email Address</label>
+                <input type="email" name="email" required placeholder="Enter your email address">
+                <div class="help-text">We'll send a copy of your responses to this email</div>
+            </div>
+            <button type="submit" class="submit-button">Submit Questionnaire</button>
+        </div>
     </form>
-<script>
-document.getElementById('client-questionnaire').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Collect form data
-    const formData = new FormData(this);
-    const formObject = {};
-    formData.forEach((value, key) => formObject[key] = value);
-    
-    // Format the email body nicely
-    let emailBody = "Website Questionnaire Responses\n\n";
-    for (const [key, value] of Object.entries(formObject)) {
-        const fieldName = key.replace(/_/g, ' ')
-            .split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-        
-        emailBody += `${fieldName}:\n${value}\n\n`;
-    }
-    
-    // Open email client with form data
-    window.location.href = `mailto:keaux@outlook.com?subject=Website Questionnaire Submission - ${formObject.client_email}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Show confirmation message
-    alert('Thank you! Your email client will open with your responses. Please send the email to complete your submission.');
-});
-</script>
+
+    <script>
+        document.getElementById('client-questionnaire').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Form will submit automatically to Formspree
+            setTimeout(() => {
+                submitButton.textContent = 'Submit Questionnaire';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
