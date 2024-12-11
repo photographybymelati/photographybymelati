@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader"></div>
+
+    <!-- Navigation -->
     <header>
         <div class="container">
             <nav>
@@ -17,6 +21,7 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -24,36 +29,39 @@
     </header>
 
     <main>
-        <section class="hero" id="home">
+        <!-- Hero Section -->
+        <section class="hero parallax" id="home" data-speed="0.5">
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content fade-in">
                     <h1>Hello, I'm Melati</h1>
-                    <p>I specialize in capturing authentic moments in natural settings. From family portraits to wedding days, my style focuses on genuine emotions and beautiful light.</p>
+                    <p>Southern Utah Photographer • Moody photography ♡<br>
+                    Portraits | Real Estate | Wedding | Up for anything ❤</p>
                 </div>
             </div>
         </section>
 
+        <!-- Services Section -->
         <section class="services" id="services">
             <div class="container">
                 <h2>Photography Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <img src="/api/placeholder/400/300" alt="Wedding Photography">
+                        <img src="/api/placeholder/400/300" alt="Wedding Photography" data-src="/api/placeholder/400/300">
                         <h3>Weddings</h3>
                         <p>Documenting your special day from start to finish</p>
                     </div>
                     <div class="service-card">
-                        <img src="/api/placeholder/400/300" alt="Family Photography">
+                        <img src="/api/placeholder/400/300" alt="Family Photography" data-src="/api/placeholder/400/300">
                         <h3>Family Sessions</h3>
                         <p>Natural, candid moments with your loved ones</p>
                     </div>
                     <div class="service-card">
-                        <img src="/api/placeholder/400/300" alt="Portrait Photography">
+                        <img src="/api/placeholder/400/300" alt="Portrait Photography" data-src="/api/placeholder/400/300">
                         <h3>Portraits</h3>
                         <p>Professional portraits for every milestone</p>
                     </div>
                     <div class="service-card">
-                        <img src="/api/placeholder/400/300" alt="Real Estate Photography">
+                        <img src="/api/placeholder/400/300" alt="Real Estate Photography" data-src="/api/placeholder/400/300">
                         <h3>Real Estate</h3>
                         <p>Showcasing properties in their best light</p>
                     </div>
@@ -61,38 +69,40 @@
             </div>
         </section>
 
+        <!-- Portfolio Section -->
         <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2>Recent Work</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Wedding Photography">
+                        <img src="/api/placeholder/800/1200" alt="Wedding Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Weddings</div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Family Photography">
+                        <img src="/api/placeholder/800/1200" alt="Family Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Families</div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Portrait Photography">
+                        <img src="/api/placeholder/800/1200" alt="Portrait Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Portraits</div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Engagement Photography">
+                        <img src="/api/placeholder/800/1200" alt="Engagement Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Engagements</div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Graduate Photography">
+                        <img src="/api/placeholder/800/1200" alt="Graduate Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Graduates</div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="/api/placeholder/800/1200" alt="Real Estate Photography">
+                        <img src="/api/placeholder/800/1200" alt="Real Estate Photography" data-src="/api/placeholder/800/1200">
                         <div class="portfolio-category">Real Estate</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Pricing Section -->
         <section class="pricing" id="pricing">
             <div class="container">
                 <h2>Investment</h2>
@@ -134,12 +144,79 @@
             </div>
         </section>
 
+        <!-- Blog Section -->
+        <section class="blog" id="blog">
+            <div class="container">
+                <h2>Recent Stories</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
+                        <div class="blog-content">
+                            <div class="blog-date">December 8, 2024</div>
+                            <h3 class="blog-title">A Magical Sunset Wedding in Southern Utah</h3>
+                            <p class="blog-excerpt">
+                                Join me as I capture Sarah and Mike's beautiful ceremony against the stunning red rocks...
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
+                        <div class="blog-content">
+                            <div class="blog-date">December 1, 2024</div>
+                            <h3 class="blog-title">Tips for Your Family Photo Session</h3>
+                            <p class="blog-excerpt">
+                                Planning your family photos? Here are my top tips for a stress-free session...
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
+                        <div class="blog-content">
+                            <div class="blog-date">November 25, 2024</div>
+                            <h3 class="blog-title">Best Locations for Engagement Photos</h3>
+                            <p class="blog-excerpt">
+                                Discovering the most photogenic spots in Southern Utah for your engagement session...
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="container">
                 <h2>Let's Create Something Beautiful</h2>
                 <div class="contact-content">
-                    <h3>Get in Touch</h3>
-                    <p>Now booking sessions in Southern Utah and surrounding areas</p>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="session-type">Session Type</label>
+                            <select id="session-type" name="session-type" required>
+                                <option value="">Select a Session Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="family">Family</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="real-estate">Real Estate</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    
                     <div class="social-links">
                         <a href="#" target="_blank">Instagram</a>
                         <a href="#" target="_blank">Facebook</a>
@@ -156,26 +233,18 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <!-- Lightbox Container -->
+    <div id="lightbox">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <button class="prev-image">&#10094;</button>
+            <button class="next-image">&#10095;</button>
+            <img src="" alt="Lightbox Image">
+        </div>
+    </div>
 
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
