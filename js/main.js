@@ -2,6 +2,16 @@
 // main.js
 
 // DOM Elements
+// Add this at the start of your main.js
+window.addEventListener('DOMContentLoaded', () => {
+    // Hide loader immediately
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        loader.style.display = 'none';
+    }
+});
+
 const header = document.querySelector('header');
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navLinks = document.querySelector('.nav-links');
