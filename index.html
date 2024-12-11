@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melati Photography | Southern Utah Photographer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography. Natural light and moody photography capturing authentic moments.">
+    <meta name="keywords" content="photographer, Southern Utah, wedding photography, family portraits, real estate photography, professional photographer">
+    <meta name="author" content="Melati Photography">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://photographybymelati.com/">
+    <meta property="og:title" content="Melati Photography | Southern Utah Photographer">
+    <meta property="og:description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography.">
+    <meta property="og:image" content="https://photographybymelati.com/assets/images/featured-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://photographybymelati.com/">
+    <meta name="twitter:title" content="Melati Photography | Southern Utah Photographer">
+    <meta name="twitter:description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography.">
+    <meta name="twitter:image" content="https://photographybymelati.com/assets/images/featured-image.jpg">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preload Key Images -->
+    <link rel="preload" as="image" href="assets/images/hero-image.jpg">
 </head>
 <body>
     <!-- Loading Screen -->
-    <div class="loader"></div>
+    <div class="loader">
+        <div class="loader-content">
+            <span>Loading...</span>
+        </div>
+    </div>
 
     <!-- Navigation -->
-    <header>
+    <header class="header">
         <div class="container">
             <nav>
                 <div class="logo">MELATI PHOTOGRAPHY</div>
-                <ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -33,9 +72,8 @@
         <section class="hero parallax" id="home" data-speed="0.5">
             <div class="container">
                 <div class="hero-content fade-in">
-                    <h1>Hello, I'm Melati</h1>
-                    <p>Southern Utah Photographer • Moody photography ♡<br>
-                    Portraits | Real Estate | Wedding | Up for anything ❤</p>
+                    <h1>Southern Utah Photographer</h1>
+                    <p>Specializing in weddings, portraits, and real estate photography</p>
                 </div>
             </div>
         </section>
@@ -45,23 +83,23 @@
             <div class="container">
                 <h2>Photography Services</h2>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <img src="https://placehold.co/400x300" alt="Wedding Photography" data-src="https://placehold.co/400x300">
+                    <div class="service-card" data-aos="fade-up">
+                        <img src="https://placehold.co/400x300" alt="Wedding Photography" loading="lazy">
                         <h3>Weddings</h3>
                         <p>Documenting your special day from start to finish</p>
                     </div>
-                    <div class="service-card">
-                        <img src="https://placehold.co/400x300" alt="Family Photography" data-src="https://placehold.co/400x300">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://placehold.co/400x300" alt="Family Photography" loading="lazy">
                         <h3>Family Sessions</h3>
                         <p>Natural, candid moments with your loved ones</p>
                     </div>
-                    <div class="service-card">
-                        <img src="https://placehold.co/400x300" alt="Portrait Photography" data-src="https://placehold.co/400x300">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/400x300" alt="Portrait Photography" loading="lazy">
                         <h3>Portraits</h3>
                         <p>Professional portraits for every milestone</p>
                     </div>
-                    <div class="service-card">
-                        <img src="https://placehold.co/400x300" alt="Real Estate Photography" data-src="https://placehold.co/400x300">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://placehold.co/400x300" alt="Real Estate Photography" loading="lazy">
                         <h3>Real Estate</h3>
                         <p>Showcasing properties in their best light</p>
                     </div>
@@ -74,106 +112,29 @@
             <div class="container">
                 <h2>Recent Work</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Wedding Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Weddings</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Family Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Families</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Portrait Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Portraits</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Engagement Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Engagements</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Graduate Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Graduates</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://placehold.co/800x1200" alt="Real Estate Photography" data-src="https://placehold.co/800x1200">
-                        <div class="portfolio-category">Real Estate</div>
-                    </div>
+                    <!-- Portfolio items will be dynamically loaded -->
                 </div>
             </div>
         </section>
 
-
-<!-- Instagram Feed Section -->
-<section class="instagram-section">
-    <div class="container">
-        <h2>Latest Captures</h2>
-        <a href="https://www.instagram.com/photographybymelati/" class="insta-handle" target="_blank">@photographybymelati</a>
-        <div class="instagram-masonry">
-            <!-- Column 1 -->
-            <div class="masonry-column">
-                <a href="https://www.instagram.com/p/example1" class="insta-item tall" target="_blank">
-                    <img src="https://placehold.co/600x900" alt="Wedding Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/p/example2" class="insta-item" target="_blank">
-                    <img src="https://placehold.co/600x600" alt="Portrait Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
+        <!-- Instagram Feed Section -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2>Latest Captures</h2>
+                <a href="https://www.instagram.com/photographybymelati/" class="insta-handle" target="_blank">@photographybymelati</a>
+                <div class="instagram-masonry">
+                    <!-- Instagram feed will be dynamically loaded -->
+                </div>
+                <a href="https://www.instagram.com/photographybymelati/" class="follow-btn" target="_blank">Follow on Instagram</a>
             </div>
-            
-            <!-- Column 2 -->
-            <div class="masonry-column">
-                <a href="https://www.instagram.com/p/example3" class="insta-item" target="_blank">
-                    <img src="https://placehold.co/600x600" alt="Family Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/p/example4" class="insta-item tall" target="_blank">
-                    <img src="https://placehold.co/600x900" alt="Engagement Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
-            </div>
-            
-            <!-- Column 3 -->
-            <div class="masonry-column">
-                <a href="https://www.instagram.com/p/example5" class="insta-item wide" target="_blank">
-                    <img src="https://placehold.co/900x600" alt="Landscape Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/p/example6" class="insta-item" target="_blank">
-                    <img src="https://placehold.co/600x600" alt="Portrait Photography">
-                    <div class="overlay">
-                        <i class="instagram-icon"></i>
-                        <span class="view-post">View on Instagram</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <a href="https://www.instagram.com/photographybymelati/" class="follow-btn" target="_blank">Follow on Instagram</a>
-    </div>
-</section>
-
+        </section>
 
         <!-- Pricing Section -->
         <section class="pricing" id="pricing">
             <div class="container">
                 <h2>Investment</h2>
                 <div class="pricing-grid">
-                    <div class="pricing-card">
+                    <div class="pricing-card" data-aos="fade-up">
                         <h3>Portrait Session</h3>
                         <div class="price">Starting at $300</div>
                         <ul class="price-details">
@@ -184,7 +145,7 @@
                             <li>Print release</li>
                         </ul>
                     </div>
-                    <div class="pricing-card">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
                         <h3>Wedding Collection</h3>
                         <div class="price">Starting at $2,000</div>
                         <ul class="price-details">
@@ -195,7 +156,7 @@
                             <li>Print release</li>
                         </ul>
                     </div>
-                    <div class="pricing-card">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
                         <h3>Family Session</h3>
                         <div class="price">Starting at $400</div>
                         <ul class="price-details">
@@ -210,87 +171,50 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section class="blog" id="blog">
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
             <div class="container">
-                <h2>Recent Stories</h2>
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
-                        <div class="blog-content">
-                            <div class="blog-date">December 8, 2024</div>
-                            <h3 class="blog-title">A Magical Sunset Wedding in Southern Utah</h3>
-                            <p class="blog-excerpt">
-                                Join me as I capture Sarah and Mike's beautiful ceremony against the stunning red rocks...
-                            </p>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
-                        <div class="blog-content">
-                            <div class="blog-date">December 1, 2024</div>
-                            <h3 class="blog-title">Tips for Your Family Photo Session</h3>
-                            <p class="blog-excerpt">
-                                Planning your family photos? Here are my top tips for a stress-free session...
-                            </p>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <img src="/api/placeholder/600/400" alt="Blog Post" data-src="/api/placeholder/600/400">
-                        <div class="blog-content">
-                            <div class="blog-date">November 25, 2024</div>
-                            <h3 class="blog-title">Best Locations for Engagement Photos</h3>
-                            <p class="blog-excerpt">
-                                Discovering the most photogenic spots in Southern Utah for your engagement session...
-                            </p>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </article>
+                <h2>Let's Create Something Beautiful</h2>
+                <div class="contact-content">
+                    <!-- HoneyBook Contact Form Embed -->
+                    <div class="honeybook-inline-widget">
+                        <iframe class='honeybook-widget' src='https://www.honeybook.com/widget/melati_photography/contact' width='100%' height='800px' frameborder='0'></iframe>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/photographybymelati/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/photographybymelati" target="_blank">Facebook</a>
+                        <a href="mailto:photographybymelati@gmail.com">Email</a>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <!-- Replace the existing contact form with HoneyBook -->
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Let's Create Something Beautiful</h2>
-        <div class="contact-content">
-            <!-- HoneyBook Contact Form Embed -->
-            <div class="honeybook-inline-widget">
-                <iframe class='honeybook-widget' src='https://www.honeybook.com/widget/melati_photography/contact' width='100%' height='800px' frameborder='0'></iframe>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/photographybymelati/" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/photographybymelati" target="_blank">Facebook</a>
-                <a href="mailto:photographybymelati@gmail.com">Email</a>
-            </div>
-        </div>
-    </div>
-</section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2024 Melati Photography • Southern Utah</p>
+            <div class="footer-content">
+                <p>© 2024 Melati Photography • Southern Utah</p>
+                <nav class="footer-nav">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </nav>
+            </div>
         </div>
     </footer>
 
     <!-- Lightbox Container -->
-    <div id="lightbox">
+    <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
-            <button class="close-lightbox">&times;</button>
-            <button class="prev-image">&#10094;</button>
-            <button class="next-image">&#10095;</button>
+            <button class="close-lightbox" aria-label="Close">&times;</button>
+            <button class="prev-image" aria-label="Previous">&#10094;</button>
+            <button class="next-image" aria-label="Next">&#10095;</button>
             <img src="" alt="Lightbox Image">
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="animations.js"></script>
-    <script src="script.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/analytics.js" async></script>
 </body>
 </html>
