@@ -1,62 +1,78 @@
-// Create a new file called animations.js
-
-// Parallax Effect
-const parallaxElements = document.querySelectorAll('.parallax');
-window.addEventListener('scroll', () => {
-    parallaxElements.forEach(element => {
-        let speed = element.dataset.speed || 0.5;
-        let yPos = -(window.pageYOffset * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-    });
+// animations.js - Subtle animations and effects
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize animations
+    initializeAnimations();
+    
+    // Handle loading screen
+    handlePageLoad();
+    
+    // Initialize image lazy loading
+    initializeLazyLoading();
 });
 
-// Page Transition Effect
-const transitionElement = document.createElement('div');
-transitionElement.className = 'page-transition';
-document.body.appendChild(transitionElement);
+function initializeAnimations() {
+    // Subtle fade-in for sections
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '50px'
+    };
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-        e.preventDefault();
-        transitionElement.classList.add('active');
-        
-        setTimeout(() => {
-            document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-            transitionElement.classList.remove('active');
-        }, 500);
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('animate-on-scroll');
+        sectionObserver.observe(section);
     });
-});
+}
 
-// Loading Animation
-window.addEventListener('load', () => {
+function handlePageLoad() {
     const loader = document.querySelector('.loader');
-    document.body.classList.add('loaded');
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 1000);
-});
+    if (loader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+    }
+}
 
-// Image Loading Animation
-const images = document.querySelectorAll('img[data-src]');
-const imageOptions = {
-    threshold: 0,
-    rootMargin: '0px 0px 50px 0px'
-};
-
-const loadImage = (image) => {
-    image.src = image.dataset.src;
-    image.classList.add('fade-in');
-};
-
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            loadImage(entry.target);
-            observer.unobserve(entry.target);
-        }
+function initializeLazyLoading() {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px'
     });
-}, imageOptions);
 
-images.forEach(image => imageObserver.observe(image));
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Add subtle parallax effect to hero section
+let parallaxElements = document.querySelectorAll('.parallax');
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(() => {
+        parallaxElements.forEach(element => {
+            const speed = element.dataset.speed || 0.5;
+            const yPos = -(window.pageYOffset * speed);
+            element.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+});
