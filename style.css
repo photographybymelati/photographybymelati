@@ -40,16 +40,19 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    /* Add some left padding so the logo isn't flush against the screen edge on large screens */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .main-nav .logo img {
-    height: 70px; /* increased from 50px to 70px */
+    height: 80px; /* Increased from 70px to 80px for more presence */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem; /* slightly increase gap for better spacing */
+    gap: 1.5rem;
 }
 
 .nav-links li a {
@@ -67,7 +70,8 @@ a:hover {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    padding-top: 8rem; /* ensure hero text isn't hidden behind nav */
+    /* Increase top padding from 8rem to 10rem for more space under the nav */
+    padding-top: 10rem;
 }
 
 .hero-text h1 {
@@ -290,6 +294,8 @@ a:hover {
     .nav-container {
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .nav-links {
