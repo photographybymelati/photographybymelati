@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
                 window.scrollTo({
-                    top: target.offsetTop - 70,
+                    top: target.offsetTop - 80, // Adjusted offset for new smaller nav bar
                     behavior: 'smooth'
                 });
             }
