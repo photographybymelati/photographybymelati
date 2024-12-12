@@ -3,52 +3,65 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-    <meta name="description" content="Photography by Melati - Southern Utah Photographer specializing in Weddings, Portraits, and Real Estate."/>
+    <meta name="description" content="Photography by Melati - Southern Utah Photographer specializing in Weddings, Portraits, and Real Estate. Natural, warm, and timeless imagery."/>
+    <!-- CHANGE START: Add keywords and Open Graph tags for better SEO and social sharing -->
+    <meta name="keywords" content="Photography, Southern Utah, St. George, Weddings, Portraits, Real Estate">
+    <meta property="og:title" content="Photography by Melati">
+    <meta property="og:description" content="Capturing your life moments in Southern Utah with warmth and artistry.">
+    <meta property="og:image" content="images/og-image.jpg"> <!-- Replace with actual image if available -->
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- CHANGE END -->
     <title>Photography by Melati</title>
-    <!-- Example font usage: Scotch Display (closest Google font: "Cardo") and Avant Garde (closest modern sans: "Montserrat") -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Keeping fonts as previously chosen -->
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- NAV BAR OUTSIDE HERO -->
-
     <nav class="main-nav">
-    <div class="nav-container">
-        <div class="logo">
-            <img src="/assets/MTileNegativeWhite.png" alt="Photography by Melati Logo" />
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Add meaningful alt text to the logo -->
+                <img src="images/logo.png" alt="Photography by Melati Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#instagram">Instagram</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
-    <!-- HERO SECTION BELOW NAV -->
     <header class="hero-section" id="home">
         <div class="hero-text">
             <h1>Photography by Melati</h1>
-            <p>Capturing your life moments in Southern Utah</p>
+            <!-- CHANGE START: Added a brief descriptive tagline -->
+            <p>Capturing your life moments in Southern Utah with warmth and authenticity.</p>
+            <!-- CHANGE END -->
+
+            <!-- CHANGE START: Add a CTA button in hero section linking to contact -->
+            <a href="#contact" class="btn hero-cta">Book a Session</a>
+            <!-- CHANGE END -->
         </div>
     </header>
 
     <section class="about-section" id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p>I’m a Southern Utah-based photographer with a passion for capturing the warmth and beauty of the desert landscape. From weddings and family portraits to real estate and lifestyle shoots, my goal is to create timeless images that reflect your story.</p>
+            <!-- CHANGE START: Added more descriptive text -->
+            <p>I’m a Southern Utah-based photographer inspired by the warm desert hues and natural beauty of the region. My style focuses on genuine connections, candid moments, and timeless imagery. Whether capturing a wedding under crimson cliffs, a family portrait at sunset, or showcasing a dream home, I strive to reflect the true essence of my subjects.</p>
+            <!-- CHANGE END -->
         </div>
     </section>
-
 
     <section class="portfolio-section" id="portfolio">
         <div class="section-content">
             <h2>Portfolio</h2>
+            <p>Explore my work by category and see how I blend natural light, scenic backdrops, and storytelling techniques to create images you’ll treasure.</p>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="weddings">Weddings</button>
@@ -56,24 +69,24 @@
                 <button class="filter-btn" data-filter="realestate">Real Estate</button>
             </div>
             <div class="portfolio-grid">
-                <!-- Replace placeholder images with real samples -->
+                <!-- Add alt text to images for accessibility and SEO -->
                 <div class="portfolio-item" data-category="weddings">
-                    <img src="assets/images/wedding/DSC_2345.jpg" alt="Wedding Sample" />
+                    <img src="images/placeholder.jpg" alt="Wedding photography sample - bride and groom portrait">
                 </div>
                 <div class="portfolio-item" data-category="portraits">
-                    <img src="images/placeholder.jpg" alt="Portrait Sample" />
+                    <img src="images/placeholder.jpg" alt="Portrait photography sample - woman smiling outdoors">
                 </div>
                 <div class="portfolio-item" data-category="realestate">
-                    <img src="images/placeholder.jpg" alt="Real Estate Sample" />
+                    <img src="images/placeholder.jpg" alt="Real estate photography sample - beautiful home exterior">
                 </div>
                 <div class="portfolio-item" data-category="weddings">
-                    <img src="images/placeholder.jpg" alt="Wedding Sample" />
+                    <img src="images/placeholder.jpg" alt="Wedding photography sample - couple under desert sky">
                 </div>
                 <div class="portfolio-item" data-category="portraits">
-                    <img src="images/placeholder.jpg" alt="Portrait Sample" />
+                    <img src="images/placeholder.jpg" alt="Portrait photography sample - child laughing">
                 </div>
                 <div class="portfolio-item" data-category="realestate">
-                    <img src="images/placeholder.jpg" alt="Real Estate Sample" />
+                    <img src="images/placeholder.jpg" alt="Real estate photography sample - stylish interior">
                 </div>
             </div>
         </div>
@@ -99,12 +112,12 @@
         <div class="section-content">
             <h2>Instagram</h2>
             <p>Follow me on Instagram to see my latest work and behind-the-scenes shots.</p>
-            <!-- Placeholder Instagram images. Replace with an embedded feed later -->
             <div class="instagram-gallery">
-                <img src="images/placeholder.jpg" alt="Instagram Post 1" />
-                <img src="images/placeholder.jpg" alt="Instagram Post 2" />
-                <img src="images/placeholder.jpg" alt="Instagram Post 3" />
-                <img src="images/placeholder.jpg" alt="Instagram Post 4" />
+                <!-- Add alt texts -->
+                <img src="images/placeholder.jpg" alt="Instagram post example 1">
+                <img src="images/placeholder.jpg" alt="Instagram post example 2">
+                <img src="images/placeholder.jpg" alt="Instagram post example 3">
+                <img src="images/placeholder.jpg" alt="Instagram post example 4">
             </div>
             <a class="btn" href="https://www.instagram.com/photographybymelati/" target="_blank">View on Instagram</a>
         </div>
@@ -113,7 +126,7 @@
     <section class="contact-section" id="contact">
         <div class="section-content">
             <h2>Contact</h2>
-            <p>Interested in booking a session or have a question? Reach out via the form below.</p>
+            <p>Interested in booking a session or have a question? Reach out via the form below, and let’s capture your story together.</p>
             <form action="mailto:melatiwoodbury@gmail.com" method="POST" enctype="text/plain">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
@@ -128,7 +141,6 @@
                 <!-- 
                 <div class="honeybook-integration">
                     TODO: Insert HoneyBook code snippet here once available.
-                    <script src="path-to-honeybook-script.js"></script>
                 </div>
                 -->
 
