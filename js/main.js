@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lazy Loading for Images
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     lazyImages.forEach(img => {
+        img.src = `https://placehold.co/600x400`;
         img.addEventListener('load', () => {
             img.classList.add('loaded');
         });
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = lightbox?.querySelector('img');
     document.querySelectorAll('.portfolio-grid img').forEach(img => {
+        img.src = `https://placehold.co/600x400`;
         img.addEventListener('click', () => {
             if (lightbox && lightboxImage) {
                 lightboxImage.src = img.src;
