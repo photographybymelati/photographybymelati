@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Global styles */
-body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  color: #f5f1ee;
-  background-color: #1a1210;
-}
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
