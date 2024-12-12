@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #333333; /* text color */
-    background: #F1E9DE; /* light cream background */
+    color: #333333;
+    background: #F1E9DE;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,8 +13,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #AF5A4D; /* terracotta accent */
+    color: #AF5A4D;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #73685A;
 }
 
 .main-nav {
@@ -24,6 +29,8 @@ a {
     padding: 1rem 2rem;
     background: #F1E9DE;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 999;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -41,11 +48,6 @@ a {
 
 .nav-links li a {
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #73685A; /* darker earthy tone */
 }
 
 .hero-section {
@@ -58,7 +60,8 @@ a {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    position: relative;
+    /* Additional top padding to avoid overlap with the fixed nav */
+    padding-top: 8rem;
 }
 
 .hero-text h1 {
@@ -93,8 +96,9 @@ a {
     text-align: center;
 }
 
+/* Portfolio Section */
 .portfolio-section {
-    background: #FFF; /* white background for contrast */
+    background: #FFF;
     color: #333333;
 }
 
@@ -137,8 +141,9 @@ a {
     transform: scale(1.05);
 }
 
+/* Testimonials Section */
 .testimonials-section {
-    background: #BFBFBD; /* neutral gray */
+    background: #BFBFBD;
     color: #333333;
     text-align: center;
 }
@@ -171,6 +176,7 @@ a {
     color: #73685A;
 }
 
+/* Instagram Section */
 .instagram-section {
     background: #F1E9DE;
     text-align: center;
@@ -204,12 +210,14 @@ a {
     border-radius: 4px;
     font-weight: 600;
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 
 .btn:hover {
     background: #73685A;
 }
 
+/* Contact Section */
 .contact-section {
     background: #FFF;
     color: #333333;
@@ -250,6 +258,7 @@ a {
     background: #73685A;
 }
 
+/* Footer */
 .footer {
     background: #333333;
     color: #F1E9DE;
@@ -261,6 +270,7 @@ a {
     margin: 0;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
