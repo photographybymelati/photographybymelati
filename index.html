@@ -22,11 +22,11 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="/assets/css/main.css" as="style">
-    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&display=swap" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&display=swap" crossorigin>
     
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css">
-
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -56,10 +56,10 @@
             </button>
             <div class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="/portfolio" data-text="Portfolio">Portfolio</a></li>
-                    <li><a href="/about" data-text="About">About</a></li>
-                    <li><a href="/services" data-text="Services">Services</a></li>
-                    <li><a href="/contact" data-text="Contact">Contact</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -67,7 +67,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" data-parallax="scroll">
+        <section id="hero" class="hero" data-parallax="scroll">
             <div class="hero-content">
                 <h1 class="fade-in">Capturing Authentic Moments</h1>
                 <p class="fade-in-delay">Southern Utah Photography</p>
@@ -80,7 +80,7 @@
         </section>
 
         <!-- Featured Work -->
-        <section class="featured-work">
+        <section id="featured" class="featured-work">
             <div class="section-header">
                 <h2>Featured Stories</h2>
             </div>
@@ -90,7 +90,7 @@
         </section>
 
         <!-- Categories -->
-        <section class="categories">
+        <section id="categories" class="categories">
             <div class="category-grid">
                 <a href="/portfolio/weddings" class="category-item">
                     <div class="category-image">
@@ -114,7 +114,7 @@
         </section>
 
         <!-- About Preview -->
-        <section class="about-preview">
+        <section id="about" class="about-preview">
             <div class="about-content">
                 <h2>Hey, I'm Melati</h2>
                 <p>Capturing authentic moments in Southern Utah's stunning landscapes.</p>
@@ -123,7 +123,7 @@
         </section>
 
         <!-- Instagram Feed -->
-        <section class="instagram-feed">
+        <section id="instagram" class="instagram-feed">
             <div class="section-header">
                 <h2>Latest Captures</h2>
                 <a href="https://instagram.com/photographybymelati" class="insta-handle" target="_blank" rel="noopener">@photographybymelati</a>
@@ -134,7 +134,7 @@
         </section>
 
         <!-- Contact Preview -->
-        <section class="contact-preview">
+        <section id="contact" class="contact-preview">
             <div class="contact-content">
                 <h2>Let's Create Together</h2>
                 <p>Now booking for 2024-2025</p>
@@ -147,9 +147,11 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>Melati Photography</h3>
-                <p>Southern Utah</p>
+                <address>
+                    <p>Southern Utah</p>
+                </address>
             </div>
-            <div class="footer-links">
+            <nav class="footer-links">
                 <div class="footer-nav">
                     <h4>Navigate</h4>
                     <ul>
@@ -167,7 +169,7 @@
                         <li><a href="mailto:hello@photographybymelati.com">Email</a></li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Melati Photography • All Rights Reserved</p>
@@ -175,6 +177,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/main.js" type="module"></script>
+    <script src="/assets/js/main.js" type="module" defer></script>
 </body>
 </html>
