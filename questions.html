@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Content Questionnaire - Melati Photography</title>
+    <style>
+        :root {
+            --primary-color: #2c2c2c;
+            --accent-color: #c17f59;
+            --background-color: #faf6f2;
+            --text-color: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .questionnaire-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        .priority-label {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .priority-1 {
+            background-color: #ffe0e0;
+            color: #d63031;
+        }
+
+        .priority-2 {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .priority-3 {
+            background-color: #e0f4ff;
+            color: #0984e3;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        .notes-field {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        .help-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .submit-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .submit-section {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Content Questionnaire</h1>
+    <p>Welcome! This questionnaire will help us create a website that perfectly represents your photography business. Please provide as much detail as possible.</p>
+
+    <form id="client-questionnaire" action="https://formspree.io/f/mkgnaper" method="POST">
+        <!-- PRIORITY 1 -->
+        <div class="questionnaire-section">
+            <span class="priority-label priority-1">Essential for Launch</span>
+            <h2>Essential Business Information</h2>
+            
+            <div class="form-group">
+                <label>HoneyBook Widget Code</label>
+                <textarea name="honeybook_code" placeholder="Please paste your HoneyBook widget code here"></textarea>
+                <div class="help-text">This can be found in your HoneyBook account under Scheduling/Contact Form settings</div>
+            </div>
+
+            <div class="form-group">
+                <label>Service Area</label>
+                <textarea name="service_area" placeholder="Which areas of Southern Utah do you serve? Please list specific cities/regions."></textarea>
+                <div class="notes-field">Additional travel considerations:</div>
+            </div>
+
+            <div class="form-group">
+                <label>Package Pricing Confirmation</label>
+                <div class="help-text">Current website shows these prices. Please confirm or adjust:</div>
+                <input type="text" name="portrait_price" placeholder="Portrait Session (currently $300)">
+                <input type="text" name="wedding_price" placeholder="Wedding Collection (currently $2,000)">
+                <input type="text" name="family_price" placeholder="Family Session (currently $400)">
+                <div class="notes-field">Additional pricing notes or packages:</div>
+                <textarea name="pricing_notes"></textarea>
+            </div>
+
+            <h3>Portfolio Images</h3>
+            <div class="help-text">Please provide 6-8 best examples for each category. You can send these separately or provide a link to download.</div>
+            
+            <div class="form-group">
+                <label>Image Collection Link</label>
+                <input type="text" name="portfolio_link" placeholder="Dropbox/Google Drive link to your images">
+                <div class="notes-field">Preferred organization/categorization notes:</div>
+                <textarea name="portfolio_notes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>About You</label>
+                <div class="help-text">Share your story, photography style, and what makes your work unique (2-3 paragraphs)</div>
+                <textarea name="about_text" placeholder="Tell us about yourself and your photography journey..."></textarea>
+            </div>
+        </div>
+
+        <!-- PRIORITY 2 -->
+        <div class="questionnaire-section">
+            <span class="priority-label priority-2">Important for Growth</span>
+            <h2>Business Policies & Branding</h2>
+
+            <div class="form-group">
+                <label>Booking Process</label>
+                <textarea name="booking_process" placeholder="Describe your typical booking process, from inquiry to session completion"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Session Policies</label>
+                <textarea name="deposit_amount" placeholder="Deposit requirements, cancellation policy, print release terms..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Brand Preferences</label>
+                <div class="help-text">Current design uses warm earth tones and elegant fonts. Please share any preferences:</div>
+                <textarea name="brand_preferences" placeholder="Color preferences, style notes, specific fonts..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Testimonials</label>
+                <textarea name="testimonials" placeholder="Please share 2-3 favorite client testimonials"></textarea>
+            </div>
+        </div>
+
+        <!-- PRIORITY 3 -->
+        <div class="questionnaire-section">
+            <span class="priority-label priority-3">Enhancement Features</span>
+            <h2>Additional Features</h2>
+
+            <div class="form-group">
+                <label>Would you like client galleries?</label>
+                <select name="client_galleries">
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="later">Maybe Later</option>
+                </select>
+                <div class="notes-field">Additional gallery requirements:</div>
+                <textarea name="gallery_notes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Additional Features Interest</label>
+                <div class="help-text">Check any features you'd like to include:</div>
+                <input type="checkbox" name="features_analytics"> Google Analytics<br>
+                <input type="checkbox" name="features_newsletter"> Newsletter Integration<br>
+                <input type="checkbox" name="features_blog"> Blog Section<br>
+                <input type="checkbox" name="features_printshop"> Print Shop<br>
+                <div class="notes-field">Additional feature requests:</div>
+                <textarea name="feature_notes"></textarea>
+            </div>
+        </div>
+
+        <div class="questionnaire-section">
+            <h2>Additional Notes</h2>
+            <div class="form-group">
+                <label>Any other information or requests?</label>
+                <textarea name="additional_notes" placeholder="Share any other thoughts, ideas, or questions..."></textarea>
+            </div>
+        </div>
+
+        <div class="questionnaire-section submit-section">
+            <h2>Submit Your Questionnaire</h2>
+            <div class="form-group">
+                <label>Your Email Address</label>
+                <input type="email" name="email" required placeholder="Enter your email address">
+                <div class="help-text">We'll send a copy of your responses to this email</div>
+            </div>
+            <button type="submit" class="submit-button">Submit Questionnaire</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('client-questionnaire').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Form will submit automatically to Formspree
+            setTimeout(() => {
+                submitButton.textContent = 'Submit Questionnaire';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
