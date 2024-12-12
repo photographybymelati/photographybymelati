@@ -1,222 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melati Photography | Southern Utah Photographer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography. Natural light and moody photography capturing authentic moments.">
-    <meta name="keywords" content="photographer, Southern Utah, wedding photography, family portraits, real estate photography, professional photographer">
-    <meta name="author" content="Melati Photography">
-
+    <meta name="description" content="Southern Utah Photographer capturing authentic moments in moody, warm tones. Specializing in weddings, portraits, and lifestyle photography.">
+    <meta name="keywords" content="photographer, Southern Utah, wedding photography, moody photography, authentic moments, Utah photographer">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://photographybymelati.com/">
-    <meta property="og:title" content="Melati Photography | Southern Utah Photographer">
-    <meta property="og:description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography.">
+    <meta property="og:title" content="Melati Photography | Authentic Southern Utah Photographer">
+    <meta property="og:description" content="Capturing authentic moments in Southern Utah with a moody, warm aesthetic.">
     <meta property="og:image" content="https://photographybymelati.com/assets/images/featured-image.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://photographybymelati.com/">
-    <meta name="twitter:title" content="Melati Photography | Southern Utah Photographer">
-    <meta name="twitter:description" content="Southern Utah Photographer specializing in weddings, family portraits, and real estate photography.">
-    <meta name="twitter:image" content="https://photographybymelati.com/assets/images/featured-image.jpg">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Pinterest Meta Tags -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta name="pinterest:description" content="Southern Utah wedding and portrait photographer with a moody, authentic style.">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&display=swap" crossorigin>
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
     
-    <!-- Preload Key Images -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 </head>
 <body>
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
     <!-- Loading Screen -->
     <div class="loader">
         <div class="loader-content">
-            <span>Loading...</span>
+            <div class="loader-logo">M</div>
+            <div class="loader-progress"></div>
         </div>
     </div>
 
     <!-- Navigation -->
     <header class="header">
-        <div class="container">
-            <nav>
-                <div class="logo">MELATI PHOTOGRAPHY</div>
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/">MELATI</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/portfolio" data-text="Portfolio">Portfolio</a></li>
+                    <li><a href="/about" data-text="About">About</a></li>
+                    <li><a href="/services" data-text="Services">Services</a></li>
+                    <li><a href="/contact" data-text="Contact">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero parallax" id="home" data-speed="0.5">
-            <div class="container">
-                <div class="hero-content fade-in">
-                    <h1>Southern Utah Photographer</h1>
-                    <p>Specializing in weddings, portraits, and real estate photography</p>
-                </div>
+        <section class="hero" data-parallax="scroll">
+            <div class="hero-content">
+                <h1 class="fade-in">Capturing Authentic Moments</h1>
+                <p class="fade-in-delay">Southern Utah Photography</p>
+                <a href="/portfolio" class="cta-button fade-in-delay-2">View Portfolio</a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-indicator"></div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="container">
-                <h2>Photography Services</h2>
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up">
-                        <img src="https://placehold.co/400x300" alt="Wedding Photography" loading="lazy">
-                        <h3>Weddings</h3>
-                        <p>Documenting your special day from start to finish</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://placehold.co/400x300" alt="Family Photography" loading="lazy">
-                        <h3>Family Sessions</h3>
-                        <p>Natural, candid moments with your loved ones</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://placehold.co/400x300" alt="Portrait Photography" loading="lazy">
-                        <h3>Portraits</h3>
-                        <p>Professional portraits for every milestone</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://placehold.co/400x300" alt="Real Estate Photography" loading="lazy">
-                        <h3>Real Estate</h3>
-                        <p>Showcasing properties in their best light</p>
-                    </div>
-                </div>
+        <!-- Featured Work -->
+        <section class="featured-work">
+            <div class="section-header">
+                <h2>Featured Stories</h2>
+            </div>
+            <div class="featured-grid">
+                <!-- Dynamic content will be loaded here -->
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <h2>Recent Work</h2>
-                <div class="portfolio-grid">
-                    <!-- Portfolio items will be dynamically loaded -->
-                </div>
+        <!-- Categories -->
+        <section class="categories">
+            <div class="category-grid">
+                <a href="/portfolio/weddings" class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/800/1200" alt="Wedding Photography" loading="lazy">
+                    </div>
+                    <h3>Weddings</h3>
+                </a>
+                <a href="/portfolio/portraits" class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/800/1200" alt="Portrait Photography" loading="lazy">
+                    </div>
+                    <h3>Portraits</h3>
+                </a>
+                <a href="/portfolio/couples" class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/800/1200" alt="Couples Photography" loading="lazy">
+                    </div>
+                    <h3>Couples</h3>
+                </a>
             </div>
         </section>
 
-        <!-- Instagram Feed Section -->
-        <section class="instagram-section">
-            <div class="container">
+        <!-- About Preview -->
+        <section class="about-preview">
+            <div class="about-content">
+                <h2>Hey, I'm Melati</h2>
+                <p>Capturing authentic moments in Southern Utah's stunning landscapes.</p>
+                <a href="/about" class="text-link">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="instagram-feed">
+            <div class="section-header">
                 <h2>Latest Captures</h2>
-                <a href="https://www.instagram.com/photographybymelati/" class="insta-handle" target="_blank">@photographybymelati</a>
-                <div class="instagram-masonry">
-                    <!-- Instagram feed will be dynamically loaded -->
-                </div>
-                <a href="https://www.instagram.com/photographybymelati/" class="follow-btn" target="_blank">Follow on Instagram</a>
+                <a href="https://instagram.com/photographybymelati" class="insta-handle" target="_blank" rel="noopener">@photographybymelati</a>
+            </div>
+            <div class="instagram-grid">
+                <!-- Dynamic content will be loaded here -->
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing" id="pricing">
-            <div class="container">
-                <h2>Investment</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card" data-aos="fade-up">
-                        <h3>Portrait Session</h3>
-                        <div class="price">Starting at $300</div>
-                        <ul class="price-details">
-                            <li>1-2 hour session</li>
-                            <li>1 location</li>
-                            <li>Online gallery</li>
-                            <li>30+ edited images</li>
-                            <li>Print release</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Wedding Collection</h3>
-                        <div class="price">Starting at $2,000</div>
-                        <ul class="price-details">
-                            <li>8 hours coverage</li>
-                            <li>Second photographer</li>
-                            <li>Online gallery</li>
-                            <li>500+ edited images</li>
-                            <li>Print release</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Family Session</h3>
-                        <div class="price">Starting at $400</div>
-                        <ul class="price-details">
-                            <li>1-2 hour session</li>
-                            <li>Up to 6 people</li>
-                            <li>Online gallery</li>
-                            <li>40+ edited images</li>
-                            <li>Print release</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <h2>Let's Create Something Beautiful</h2>
-                <div class="contact-content">
-                    <!-- HoneyBook Contact Form Embed -->
-               <!-- Comment out or temporarily remove this -->
-<!--
-<div class="honeybook-inline-widget">
-    <iframe class='honeybook-widget' src='https://www.honeybook.com/widget/melati_photography/contact' width='100%' height='800px' frameborder='0'></iframe>
-</div>
--->
-                    
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/photographybymelati/" target="_blank">Instagram</a>
-                        <a href="https://www.facebook.com/photographybymelati" target="_blank">Facebook</a>
-                        <a href="mailto:photographybymelati@gmail.com">Email</a>
-                    </div>
-                </div>
+        <!-- Contact Preview -->
+        <section class="contact-preview">
+            <div class="contact-content">
+                <h2>Let's Create Together</h2>
+                <p>Now booking for 2024-2025</p>
+                <a href="/contact" class="cta-button">Get in Touch</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>© 2024 Melati Photography • Southern Utah</p>
-                <nav class="footer-nav">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                </nav>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Melati Photography</h3>
+                <p>Southern Utah</p>
             </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/photographybymelati" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://pinterest.com/photographybymelati" target="_blank" rel="noopener">Pinterest</a></li>
+                        <li><a href="mailto:hello@photographybymelati.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Melati Photography • All Rights Reserved</p>
         </div>
     </footer>
 
-    <!-- Lightbox Container -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <button class="close-lightbox" aria-label="Close">&times;</button>
-            <button class="prev-image" aria-label="Previous">&#10094;</button>
-            <button class="next-image" aria-label="Next">&#10095;</button>
-            <img src="" alt="Lightbox Image">
-        </div>
-    </div>
-
     <!-- Scripts -->
-    <script src="js/main.js" defer></script>
-   <!-- <script src="js/analytics.js" async></script> -->
+    <script src="/assets/js/main.js" type="module"></script>
 </body>
 </html>
