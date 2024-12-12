@@ -33,39 +33,44 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Flex container for logo and nav links */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center; /* Vertically center logo and links */
-    justify-content: start; /* Logo on left, links follow */
-    padding: 0.5rem 1rem; /* Reduced vertical padding for a smaller nav bar */
+    align-items: center; /* Vertically center logo and nav links */
+    justify-content: flex-start; /* Logo on left, then nav links */
+    padding: 0.5rem 1rem;
 }
 
-.main-nav .logo img {
-    height: 60px; /* Smaller logo height */
-    margin-right: 2rem; /* Space between logo and nav links */
+.logo img {
+    display: block; /* Ensures no extra baseline space */
+    height: 60px; /* Adjust as needed */
+    margin-right: 2rem; /* Space between logo and links */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1rem; /* Space between links */
-    /* Because we justified content to start, the links will appear next to the logo */
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
     font-weight: 500;
-    font-size: 0.95rem; /* Slightly smaller text */
-    line-height: 1; /* Tight line-height for compact feel */
+    font-size: 0.95rem;
+    line-height: 1;
     color: #AF5A4D;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 0.5rem 0; /* Some vertical padding for clickable area */
 }
 
 .nav-links li a:hover {
     color: #73685A;
 }
+
 
 /* Hero Section */
 .hero-section {
