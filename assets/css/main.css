@@ -16,11 +16,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Layout */
-header {
-  background-color: rgba(26, 18, 16, 0.8);
-  padding: 1rem;
-}
 
 nav ul {
   list-style: none;
