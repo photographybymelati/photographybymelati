@@ -104,26 +104,26 @@ function initializeInstagramFeed() {
     const instagramFeed = document.querySelector('.instagram-masonry');
     if (!instagramFeed) return;
 
-    // Placeholder Instagram feed items
+    // Sample feed items - replace with actual Instagram API data
     const feedItems = Array.from({ length: 6 }, (_, i) => ({
-        image: `https://placehold.co/600x${Math.random() > 0.5 ? '600' : '900'}`,
-        link: 'https://instagram.com/photographybymelati'
+        image: `/api/placeholder/${600}/${600}`,
+        link: 'https://instagram.com/photographybymelati',
+        alt: `Instagram Post ${i + 1}`
     }));
 
-    feedItems.forEach(function(item) {
-        const a = document.createElement('a');
-        a.className = 'insta-item';
-        a.href = item.link;
-        a.target = '_blank';
-        a.innerHTML = `
-            <img src="${item.image}" alt="Instagram Post" loading="lazy">
+    instagramFeed.innerHTML = feedItems.map(item => `
+        <a href="${item.link}" class="insta-item" target="_blank" rel="noopener noreferrer">
+            <img src="${item.image}" alt="${item.alt}" loading="lazy">
             <div class="overlay">
-                <i class="instagram-icon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
                 <span class="view-post">View on Instagram</span>
             </div>
-        `;
-        instagramFeed.appendChild(a);
-    });
+        </a>
+    `).join('');
 }
 
 // Lightbox
