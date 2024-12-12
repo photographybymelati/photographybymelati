@@ -3,12 +3,12 @@
 
 /* Base Styles & Variables */
 :root {
-    --primary-color: #2c2c2c;
-    --accent-color: #c17f59;
-    --text-light: #ffffff;
-    --text-dark: #1a1a1a;
-    --background-dark: #0a0a0a;
-    --background-light: #f5f5f5;
+    --primary-color: #8B2F1A; /* Reflects the red rocks of St. George */
+    --accent-color: #F5A623; /* Vibrant orange inspired by sunsets */
+    --text-light: #FAF9F6; /* A warm, soft white */
+    --text-dark: #2C1B10; /* A rich, dark brown */
+    --background-dark: #3E2A1D; /* Earthy brown tones for the background */
+    --background-light: #FDF3E7; /* A light sandstone-inspired color */
     --container-width: 1400px;
     --transition-speed: 0.3s;
 }
