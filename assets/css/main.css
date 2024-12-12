@@ -89,21 +89,3 @@ footer {
   text-align: center;
 }
 
-/* Instagram feed */
-.instagram-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-/* Media queries */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav li {
-    margin-bottom: 1rem;
-  }
-}
