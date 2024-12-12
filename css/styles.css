@@ -212,22 +212,14 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Instagram Feed */
+/* Instagram Section Styles */
 .instagram-section {
     padding: 8rem 0;
+    background-color: var(--background-dark);
 }
 
-.instagram-masonry {
-    columns: 3;
-    column-gap: 1.5rem;
-}
-
-.insta-item {
-    break-inside: avoid;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
+.instagram-section h2 {
+    margin-bottom: 1rem;
 }
 
 .insta-handle {
@@ -235,8 +227,100 @@ nav a:hover {
     text-align: center;
     color: var(--accent-color);
     text-decoration: none;
-    margin: 1rem 0 3rem;
-    font-size: 1.2rem;
+    margin: 0 0 3rem;
+    font-size: 1.1rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.insta-handle:hover {
+    color: var(--text-light);
+}
+
+.instagram-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.insta-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.insta-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.insta-item:hover .overlay {
+    opacity: 1;
+}
+
+.insta-item:hover img {
+    transform: scale(1.05);
+}
+
+.view-post {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.follow-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.follow-btn:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+    .instagram-masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-masonry {
+        grid-template-columns: 1fr;
+    }
+    
+    .insta-item {
+        aspect-ratio: 4/5;
+    }
 }
 
 /* Pricing Section */
