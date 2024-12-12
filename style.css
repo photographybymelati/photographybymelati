@@ -22,11 +22,8 @@ a:hover {
     color: #73685A;
 }
 
+/* Navigation */
 .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
     background: #F1E9DE;
     position: fixed;
     top: 0;
@@ -36,20 +33,30 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
 .main-nav .logo img {
-    height: 50px;
+    height: 70px; /* increased from 50px to 70px */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* slightly increase gap for better spacing */
 }
 
 .nav-links li a {
     font-weight: 500;
 }
 
+/* Hero Section */
 .hero-section {
     height: 100vh;
     background: #AF5A4D; /* earthy red background */
@@ -60,8 +67,7 @@ a:hover {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    /* Additional top padding to avoid overlap with the fixed nav */
-    padding-top: 8rem;
+    padding-top: 8rem; /* ensure hero text isn't hidden behind nav */
 }
 
 .hero-text h1 {
@@ -221,6 +227,13 @@ a:hover {
 .contact-section {
     background: #FFF;
     color: #333333;
+    text-align: center; /* Center the section heading and intro text */
+}
+
+.contact-section .section-content > p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 .contact-section form {
@@ -229,6 +242,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: left; /* Keep form fields and labels left-aligned for usability */
+    margin-top: 2rem;
 }
 
 .contact-section label {
@@ -272,11 +287,13 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .main-nav {
+    .nav-container {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none; /* Could later add a hamburger menu if desired */
     }
 
     .main-nav.active .nav-links {
@@ -286,5 +303,13 @@ a:hover {
         background: #F1E9DE;
         width: 100%;
         padding: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
     }
 }
